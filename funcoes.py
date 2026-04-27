@@ -17,3 +17,11 @@ def guardar_dado(dados_rolados,dados_guardados,dado_selecionado):
     saida = [dados_rolados, dados_guardados]
 
     return saida
+
+def remover_dado(dados_rolados,dados_guardados,dado_selecionado):
+
+    dados_rolados.append(dados_guardados[dado_selecionado])
+    del dados_guardados[dado_selecionado]
+    saida = [dados_rolados, dados_guardados]
+
+    return saida
