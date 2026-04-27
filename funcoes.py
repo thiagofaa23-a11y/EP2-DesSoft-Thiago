@@ -25,3 +25,10 @@ def remover_dado(dados_rolados,dados_guardados,dado_selecionado):
     saida = [dados_rolados, dados_guardados]
 
     return saida
+
+def calcula_pontos_regra_simples(dados):
+    dic = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0}
+    for dado in dados:
+        dic[dado] += dado
+    
+    return dic
