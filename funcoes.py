@@ -100,6 +100,22 @@ def calcula_pontos_full_house(dados):
 
     return soma
 
+def calcula_pontos_quadra(dados):
+
+    contagem = 0
+    soma = 0
+    i = 0
+
+    for dado in dados:
+
+        contagem = dados.count(dado)
+        if contagem >= 4:
+            for dado in dados:
+                soma += dado
+            break
+
+
+    return soma
 
 
     
