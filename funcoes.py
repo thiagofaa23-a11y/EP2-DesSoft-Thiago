@@ -66,8 +66,8 @@ def calcula_pontos_sequencia_alta(dados):
     presenca = [0] * 7
     
 
-    for valor in dados:
-        presenca[valor] = 1
+    for dado in dados:
+        presenca[dado] = 1
         
     sequencia = 0
 
@@ -83,6 +83,22 @@ def calcula_pontos_sequencia_alta(dados):
             sequencia = 0 
             
     return 0
+
+def calcula_pontos_full_house(dados):
+
+    contagem = [0]*len(dados)
+    soma = 0
+    i = 0
+
+    for dado in dados:
+        contagem[i] = dados.count(dado)
+        i+=1
+
+    if 3 in contagem and 2 in contagem:
+        for dado in dados:
+            soma += dado
+
+    return soma
 
 
 
