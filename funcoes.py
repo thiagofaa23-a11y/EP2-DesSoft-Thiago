@@ -50,12 +50,34 @@ def calcula_pontos_sequencia_baixa(dados):
     sequencia = 0
 
     for i in range(1, 7):
-        
+
         if presenca[i] == 1:
             sequencia += 1
 
             if sequencia == 4:
                 return 15
+            
+        else:
+            sequencia = 0 
+            
+    return 0
+
+def calcula_pontos_sequencia_alta(dados):
+    presenca = [0] * 7
+    
+
+    for valor in dados:
+        presenca[valor] = 1
+        
+    sequencia = 0
+
+    for i in range(1, 7):
+
+        if presenca[i] == 1:
+            sequencia += 1
+
+            if sequencia == 5:
+                return 30
             
         else:
             sequencia = 0 
