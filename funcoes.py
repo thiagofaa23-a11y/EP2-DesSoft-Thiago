@@ -117,7 +117,22 @@ def calcula_pontos_quadra(dados):
 
     return soma
 
+def calcula_pontos_quina(dados):
 
+    contagem = 0
+    soma = 0
+    i = 0
+
+    for dado in dados:
+
+        contagem = dados.count(dado)
+        if contagem >= 5:
+            for dado in dados:
+                soma = 50
+            break
+
+
+    return soma
     
 
         
