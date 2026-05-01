@@ -150,3 +150,25 @@ def calcula_pontos_regra_avancada(dados):
     }
 
     return resultado
+
+
+def faz_jogada(dados, categoria, cartela):
+
+    if categoria in cartela['regra_avancada']:
+        
+        pontos = calcula_pontos_regra_avancada(dados)
+        
+        
+        cartela['regra_avancada'][categoria] = pontos[categoria]
+        
+    elif categoria.isdigit():
+        chave = int(categoria)
+        
+        if chave in cartela['regra_simples']:
+            # Chama a sua função para calcular os pontos simples
+            pontos = calcula_pontos_regra_simples(dados)
+            
+            # Atualiza a pontuação na cartela
+            cartela['regra_simples'][chave] = pontos[chave]
+
+    return cartela
